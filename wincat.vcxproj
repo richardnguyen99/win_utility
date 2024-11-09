@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+
+    <ItemGroup>
+        <ProjectConfiguration Include="Debug|Win32">
+            <Configuration>Debug</Configuration>
+            <Platform>Win32</Platform>
+        </ProjectConfiguration>
+
+        <ProjectConfiguration Include="Release|Win32">
+            <Configuration>Release</Configuration>
+            <Platform>Win32</Platform>
+
+        </ProjectConfiguration>
+    </ItemGroup>
+
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <ConfigurationType>Application</ConfigurationType>
+        <PlatformToolset>v143</PlatformToolset>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <ConfigurationType>Application</ConfigurationType>
+        <PlatformToolset>v143</PlatformToolset>
+        <Optimization>false</Optimization>
+        <Obfuscate>false</Obfuscate>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <ClCompile Include="wincat.c" />
+    </ItemGroup>
+    <ItemGroup>
+        <ClInclude Include="base.h" />
+    </ItemGroup>
+
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
+
+</Project>
